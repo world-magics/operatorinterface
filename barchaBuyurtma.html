@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>все заявки </title>
+  <link rel="stylesheet" href="./css/barchaBuyurtmalar.css">
+  <link rel="stylesheet" href="./css/index.css">
+  <script src="./js/index.js" defer></script>
+  <script src="./js/barchaBuyurtma.js" defer></script>
+
+  <!-- Font aweson  css  -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+  <!--   bootstrap  -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+</head>
+
+<body>
+
+  <header>
+    <div class="navigation">
+      <button class="nav_menu" onclick="openNav()">☰</button>
+      <ul>
+        <li><a href="./barchaBuyurtma.html">все заявки</a></li>
+        <li><a href="./sortOrders.html">Мои заявки</a></li>
+        <li><a href="./buyurtmaOlish.html">Заказы</a></li>
+        <li><a href="./kompanyInfo.html">Справодники </a></li>
+        
+        <li><a href="./message.html">чат</a></li>
+        <!-- <li><input class="search" type="search"></li> -->
+      </ul>
+      <input class="search" type="search" placeholder="search">
+    </div>
+  </header>
+
+  <!--     sidebar    -->
+  <div id="mySidebar" class="sidebar">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">x</a>
+    <img
+      src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQPT9mqiidTshsbvsr8SDUYnTLNv3f31RTL0JrQFOZd7ECP8OQ1h0mR_Ze3VlzMPknrUhs&usqp=CAU"
+      alt="profile">
+      <span class="idOperator">ID-10</span>
+      <span class="online">online</span>
+
+    <div class="respons_head" style="display: none;">
+      <a href="./barchaBuyurtma.html">все заявки</a>
+      <a href="./sortOrders.html">Мои заявки</a>
+      <a href="./buyurtmaOlish.html">Заказы</a>
+      <a href="./kompanyInfo.html">Справочники </a>
+      <a href="./kompInfoSet.html">бланк шаблон </a>
+      <a href="./message.html">чат</a></li>
+    </div>
+
+    <a href="./profile.html">личный данные </a>
+    <a href="./zayvkiIstory.html">заявки-история </a>
+    <a href="./buyurtmaHistory.html">заказы история </a>
+    <a href="./callHistory.html">звонки историй </a>
+    <a href="./operatorlarPage.html">Оператор</a>
+    <a href="#">Статистика</a>
+  </div>
+  <!--     sidebar  ends     -->
+
+  <div id="main">
+    <div class="orders">
+      <div>
+        <div class="container mb-3 mt-3" id="sortToggle">
+          <form class="form_table">
+
+            <div class="input_type">
+              <div>
+                <label>ид заказа </label> <br>
+                <input type="text">
+              </div>
+              <div> <label>пользователь </label> <br>
+                <input type="number"> <br>
+                <label>кантактыо номер </label> <br>
+                <input type="number">
+              </div>
+              <div>
+                <label>дата от </label> <br>
+                <input type="date"> <br>
+                <label>дата от </label> <br>
+                <input type="date">
+              </div>
+
+              <button class="sbros">сброс </button>
+              <button class="filter">фильтр</button>
+
+            </div>
+            <div class="select_ty">
+              <div class="select_div">
+                партнер
+                <select class="form-select" name="" required="">
+                  <option selected="" disabled="">...</option>
+                  <option value="1"></option>
+                  <option value="2"></option>
+                </select>
+              </div>
+              <div class="select_div">
+                статус
+                <select class="form-select" name="" required="">
+                  <option selected="" disabled="">...kompany</option>
+                  <option value="1">kompany</option>
+                  <option value="2"></option>
+                </select>
+              </div>
+            </div>
+
+            <!-- <div> </div> -->
+          </form>
+        </div>
+
+        <div class="container mt-5 px-2">
+          <!-- <h3 id="error" class="text-center mt-3"></h3> -->
+          <button type="button" class="sort_table btn btn-primary">Sort</button>
+          <div class="table-responsive table table-hover">
+            <table class="table table-responsive table-borderless" id="searchTable">
+              <thead>
+                <tr class="bg-light">
+                  <th scope="col" width="5%"><input class="row_chekbox form-check-input" type="checkbox">
+                  </th>
+                  <th scope="col" width="10%">#</th>
+                  <th scope="col" width="20%">Request</th>
+                  <th scope="col" width="15%">Data</th>
+                  <th scope="col" width="25%">Status</th>
+                  <th scope="col" width="15%">Action</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row"><input class="row_chekbox form-check-input" type="checkbox" onlick="checkBox()"></th>
+                  <td>01</td>
+                  <td></td>
+                  <td><i class="fa fa-check-circle-o green"></i><span class="ms-1">1 Oct, 21</span></td>
+                  <td> accepted</td>
+                  <td><a href="/zakaz-userInformatsia/userinformat.html">
+                      <i class="fa-solid fa-eye"></i>
+                    </a></td>
+                  <!-- <td class="text-end"><span class="fw-bolder">+998 902882344</span> <i
+                                        class="fa fa-ellipsis-h  ms-2"></i></td> -->
+                </tr>
+
+                <tr>
+                  <th scope="row"><input class="row_chekbox form-check-input" type="checkbox"></th>
+                  <td>02</td>
+                  <td></td>
+                  <td><i class="fa fa-dot-circle-o text-danger"></i><span class="ms-1">12 Oct, 21</span></td>
+                  <td> accepted</td>
+                  <td><a href="/zakaz-userInformatsia/userinformat.html">
+                      <i class="fa-solid fa-eye"></i>
+                    </a></td>
+                </tr>
+
+
+                <tr>
+                  <th scope="row"><input class="row_chekbox form-check-input" type="checkbox"></th>
+                  <td>03</td>
+                  <td></td>
+                  <td><i class="fa fa-check-circle-o green"></i><span class="ms-1">1 Nov,21</span></td>
+                  <td>not accepted</td>
+                  <td><a href="/zakaz-userInformatsia/userinformat.html">
+                      <i class="fa-solid fa-eye"></i>
+                    </a></td>
+                </tr>
+
+
+                <tr>
+                  <th scope="row"><input class="row_chekbox form-check-input" type="checkbox"></th>
+                  <td>04</td>
+                  <td></td>
+                  <td><i class="fa fa-check-circle-o green"></i><span class="ms-1">19 Oct,21</span></td>
+                  <td>accepted</td>
+                  <td><a href="/zakaz-userInformatsia/userinformat.html">
+                      <i class="fa-solid fa-eye"></i>
+                    </a></td>
+                </tr>
+
+
+                <tr>
+                  <th scope="row"><input class="row_chekbox form-check-input" type="checkbox"></th>
+                  <td>05</td>
+                  <td></td>
+                  <td><i class="fa fa-check-circle-o green"></i><span class="ms-1">1 Oct,21</span></td>
+                  <td> not accepted</td>
+                  <td><a href="/zakaz-userInformatsia/userinformat.html">
+                      <i class="fa-solid fa-eye"></i>
+                    </a></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>

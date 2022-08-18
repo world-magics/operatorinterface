@@ -1,0 +1,39 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+.message{
+    border-right: 2px solid rgb(198, 194, 194) !important;
+}
+select{
+    text-align: center;
+    align-items: center;
+    margin: 0 20px !important;
+}
+td i{
+    color: blue;
+    cursor: pointer;
+}
+
+@media(max-width: 500px){
+    #main{
+        overflow-x: scroll !important;
+    }
+}
+
+/*   buyurtma olish toliq malumot   */
+
+@media(max-width: 1000px){
+    .card-body{
+        overflow-x: scroll !important;
+    }
+    .row{
+        display: inline-block !important;
+    }
+
+}
+
+/*   buyurtma olish toliq malumot   */

@@ -1,0 +1,205 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    max-width: 1500px;
+    overflow-x: hidden;
+}
+.card{
+    margin-bottom: 30px;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0px 0 30px rgb(1 41 112 / 10%);
+}
+.row{
+    margin-left: 10px !important;
+}
+.card-body img{
+    width: 13vw;
+    height: 28vh;
+    object-fit: cover;
+    border-radius: 50%;
+    image-rendering: auto;
+    image-rendering: crisp-edges;
+    image-rendering: pixelated;
+    margin: 5px 70px 0 !important;
+    text-align: center !important;
+    align-items: center !important;
+}
+.user_name{
+    font-size: 35px;
+    /* text-align: center; */
+    margin: 10px 70px;
+    color: rgb(91, 89, 86);
+}
+.card-body h4{
+    margin: 5px 0;
+    color: rgb(91, 89, 86);
+    font-size: 22px !important;
+}
+.card-body h4 a:hover{
+    color: rgb(253, 188, 188);
+}
+.card-body h4 a{
+    text-decoration: none;
+}
+.user{
+    margin: 10px;
+}
+.conditional{
+    margin: 10px;
+}
+.order_story{
+    margin-top:10% !important;
+    margin-left: 20px;
+}
+.story{
+    display: flex;
+    justify-content: space-between;
+    background-color: #fff;
+    opacity: 1;
+}
+.card-history{
+    display: flex;
+    justify-content: space-between;
+}
+.story_btn{
+    color: #fff;
+    background-color: green;
+    border: none;
+    margin: 5px 10px !important;
+    padding: 5px;
+}
+.date_download span{
+    margin: 0 10px !important;
+}
+.download{
+    border: 2px solid green;
+    background-color: rgb(146, 127, 239);
+    color: rgb(83, 79, 79);
+    border-radius: 5px;
+}
+.story_user{
+    display: flex;
+    justify-content: space-between;
+    margin: 15px;
+    border: 1px solid blanchedalmond;
+    padding: 5px;
+}
+.delete_story button{
+    background-color: red;
+    color: #fff;
+    border: none;
+    padding: 3px 8px;
+}
+
+/*  modal  */
+.modal_div{
+    width: 100vw !important;
+}
+.list{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    list-style-type: none;
+    
+}
+.list li{
+    border: 1px solid rgb(81, 40, 245);
+    color: rgb(81, 40, 245);
+    margin: 3px;
+    text-align: center;
+    border-radius: 2px;
+    cursor: pointer;
+}
+.list li:hover{
+    color: #fff;
+    background-color: rgb(81, 40, 245);
+}
+.list li.active{
+    background-color: #17206a;
+    color: #fff;
+}
+/*  newOrderPage css */
+
+.buyurtma{
+    display: flex;
+    margin: 5px;
+}
+.buyurtma h5{
+    font-size: 15px;
+}
+.buyurtma h5 span{
+    margin: 0 15px;
+}
+.buyurtma_narx{
+    position: absolute;
+    right: 10px;
+    bottom: 13px;
+}
+.buyurtma_narx h6{
+    font-size: 13px;
+}
+
+/*  newOrderPage css */
+
+
+@media(max-width: 1270px){
+    .card-body img{
+        width: 40%;
+        height: 47%;
+    }
+    .card-body h4{
+        font-size: 22px;
+    }
+}
+@media(max-width: 998px){
+    .row{
+        display: block;
+        overflow-x: hidden !important;
+    }
+    .user_card{
+        height: 10% !important;
+    }
+    .card-body{
+        margin: 0 auto;
+    }
+    .card-body img{
+        width: 90px !important;
+        height: 100px !important;
+    }
+    .card-body h4{
+        font-size: 18px !important;
+        margin-left: 20px;
+    }
+}
+@media(max-width: 620px){
+    .card_table{
+        overflow-x: scroll !important;
+    }
+}
+
+/*   userInfo  html  */
+
+@media(max-width: 920px){
+    .col_table{
+        overflow-x: scroll !important;
+    }
+}
+
+/*   userInfo  html  */
+
+/*  buyurtma historiy  */
+@media(max-width: 1000px){
+    .card{
+
+        overflow-x: scroll !important;
+    }
+    .card-history{
+        display: block !important;
+    }
+    .card-history h4{
+        color: red;
+        float: right !important;
+    }
+}
+/*  buyurtma historiy  */

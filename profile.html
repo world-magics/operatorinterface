@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>личный данные </title>
+
+    <link rel="stylesheet" href="./css/index.css">
+    <script src="./js/profile.js" defer></script>
+    <script src="./js/index.js"></script>
+
+    <!--   bootstrap  -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <!-- Font aweson  css  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="navigation">
+            <button class="nav_menu" onclick="openNav()">☰</button>
+            <ul>
+                <li><a href="./barchaBuyurtma.html">все заявки</a></li>
+                <li><a href="./sortOrders.html">Мои заявки</a></li>
+                <li><a href="./buyurtmaOlish.html">Заказы</a></li>
+                <li><a href="./kompanyInfo.html">Справодники </a></li>
+                
+                <li><a href="./message.html">чат</a></li>
+                <!-- <li><input class="search" type="search"></li> -->
+            </ul>
+            <input class="search" type="search" placeholder="search">
+        </div>
+    </header>
+
+    <!--     sidebar    -->
+    <div id="mySidebar" class="sidebar">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">x</a>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQPT9mqiidTshsbvsr8SDUYnTLNv3f31RTL0JrQFOZd7ECP8OQ1h0mR_Ze3VlzMPknrUhs&usqp=CAU"
+            alt="profile">
+            <span class="idOperator">ID-10</span>
+            <span class="online">online</span>
+
+        <div class="respons_head" style="display: none;">
+            <a href="./barchaBuyurtma.html">все заявки</a>
+            <a href="./sortOrders.html">Мои заявки</a>
+            <a href="./buyurtmaOlish.html">Заказы</a>
+            <a href="./kompanyInfo.html">Справочники </a>
+            <a href="./kompInfoSet.html">бланк шаблон </a>
+            <a href="./message.html">чат</a></li>
+        </div>
+        <a href="./profile.html">личный данные </a>
+        <a href="./zayvkiIstory.html">заявки-история </a>
+        <a href="./buyurtmaHistory.html">заказы история </a>
+        <a href="./callHistory.html">звонки историй </a>
+        <a href="./operatorlarPage.html">Оператор</a>
+        <a href="#">Статистика</a>
+    </div>
+    <!--     sidebar  ends     -->
+
+
+    <main class="profile_main" id="main">
+
+        <section class="section profile">
+            <div class="row">
+                <div class="col-xl-4">
+                    <div class="card">
+                        <div class="card-body profile-card pt-4 d-flex flex-column align-items-center"> <img
+                                src="https://bootstrapmade.com/demo/templates/NiceAdmin/assets/img/profile-img.jpg"
+                                alt="Profile" class="rounded-circle">
+                            <h2>Kevin Anderson</h2>
+                            <h3>Web Designer</h3>
+                            <div class="social-links mt-2">
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                                <a href="https://www.instagram.com/bunyodbek_196/"><i class="fab fa-instagram"></i></a>
+                                <a href="https://www.linkedin.com/in/bunyodbek-jorayev-68a7b2229/"><i
+                                        class="fab fa-linkedin-in"></i></a>
+                                <a href="https://t.me/bunyodbek_196"><i class="fab fa-telegram"></i> </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-6">
+                    <div class="card">
+                        <div class="card-body pt-3">
+                            <ul class="nav profile_list">
+                                <li class="nav-item">
+                                    <button class="nav-link overview"
+                                        onclick="openPage('profile-overview')">Overview</button>
+                                </li>
+                                <li class="nav-item">
+                                    <button onclick="openPage('edit_profile')" class="nav-link editProfile">Edit
+                                        Profile</button>
+                                </li>
+                                <li class="nav-item">
+                                    <button onclick="openPage('setting')" class="nav-link settings">Settings</button>
+                                </li>
+                                <li class="nav-item">
+                                    <button onclick="openPage('changepassw')" class="nav-link">Change Password</button>
+                                </li>
+                            </ul>
+                            <div class="tab-content pt-2">
+
+                                <!--   1_) Overview  Profile   starts   -->
+                                <div class="profile profile-overview" id="profile-overview">
+                                    <h5 class="card-title">About</h5>
+                                    <p class="small fst-italic">
+                                        Sunt est soluta temporibus accusantium neque nam maiores
+                                        cumque temporibus. Tempora libero non est unde veniam est qui dolor. Ut sunt
+                                        iure rerum quae quisquam autem eveniet perspiciatis odit. Fuga sequi sed ea
+                                        saepe at unde.
+                                    </p>
+                                    <h5 class="card-title">Profile Details</h5>
+                                    <div class="row">
+                                        <div class="col-lg-3 col-md-4 label ">Full Name</div>
+                                        <div class="col-lg-9 col-md-8">Kevin Anderson</div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-lg-3 col-md-4 label">Company</div>
+                                        <div class="col-lg-9 col-md-8">Lueilwitz, Wisoky and Leuschke</div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-lg-3 col-md-4 label">Job</div>
+                                        <div class="col-lg-9 col-md-8">Web Designer</div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-lg-3 col-md-4 label">Country</div>
+                                        <div class="col-lg-9 col-md-8">USA</div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-lg-3 col-md-4 label">Address</div>
+                                        <div class="col-lg-9 col-md-8">A108 Adam Street, New York, NY 535022</div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-lg-3 col-md-4 label">Phone</div>
+                                        <div class="col-lg-9 col-md-8">(436) 486-3538 x29071</div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-lg-3 col-md-4 label">Email</div>
+                                        <div class="col-lg-9 col-md-8">k.anderson@example.com</div>
+                                    </div>
+                                </div>
+                                <!--   Overview  Profile   ends   -->
+
+                                <!--  2_)  Edit  Profile  starts   -->
+                                <div class=" profile edit-profile" id="edit_profile" style="display: none">
+                                    <div class="pt-3" id="profile-edit" role="tabpanel">
+                                        <form>
+                                            <div class="row mb-3">
+                                                <label for="profileImage" class="col-md-4 col-lg-3 col-form-label">
+                                                    Profile Image
+                                                </label>
+                                                <div class="col-md-8 col-lg-9">
+                                                    <img src="https://bootstrapmade.com/demo/templates/NiceAdmin/assets/img/profile-img.jpg"
+                                                        alt="Profile">
+                                                    <div class="pt-2">
+                                                        <a href="#" class="btn btn-primary btn-sm"
+                                                            title="Upload new profile image">
+                                                            <i class="fas fa-upload"></i>
+                                                        </a>
+                                                        <a href="#" class="btn btn-danger btn-sm"
+                                                            title="Remove my profile image">
+                                                            <i class="fas fa-trash-alt"></i>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row mb-3">
+                                                <label for="fullName" class="col-md-4 col-lg-3 col-form-label">Full
+                                                    Name</label>
+                                                <div class="col-md-8 col-lg-9">
+                                                    <input name="fullName" type="text" class="form-control"
+                                                        id="fullName" value="Kevin Anderson">
+                                                </div>
+                                            </div>
+                                            <div class="row mb-3"> <label for="about"
+                                                    class="col-md-4 col-lg-3 col-form-label">About</label>
+                                                <div class="col-md-8 col-lg-9">
+                                                    <textarea name="about" class="form-control" id="about"
+                                                        style="height: 100px">Sunt est soluta temporibus accusantium neque nam maiores cumque temporibus. Tempora libero non est unde veniam est qui dolor. Ut sunt iure rerum quae quisquam autem eveniet perspiciatis odit. Fuga sequi sed ea saepe at unde.
+                                                    </textarea>
+                                                </div>
+                                            </div>
+                                            <div class="row mb-3">
+                                                <label for="company"
+                                                    class="col-md-4 col-lg-3 col-form-label">Company</label>
+                                                <div class="col-md-8 col-lg-9">
+                                                    <input name="company" type="text" class="form-control" id="company"
+                                                        value="Lueilwitz, Wisoky and Leuschke">
+                                                </div>
+                                            </div>
+                                            <div class="row mb-3">
+                                                <label for="Job" class="col-md-4 col-lg-3 col-form-label">Job</label>
+                                                <div class="col-md-8 col-lg-9">
+                                                    <input name="job" type="text" class="form-control" id="Job"
+                                                        value="Web Designer">
+                                                </div>
+                                            </div>
+                                            <div class="row mb-3">
+                                                <label for="Country"
+                                                    class="col-md-4 col-lg-3 col-form-label">Country</label>
+                                                <div class="col-md-8 col-lg-9">
+                                                    <input name="country" type="text" class="form-control" id="Country"
+                                                        value="USA">
+                                                </div>
+                                            </div>
+                                            <div class="row mb-3">
+                                                <label for="Address"
+                                                    class="col-md-4 col-lg-3 col-form-label">Address</label>
+                                                <div class="col-md-8 col-lg-9">
+                                                    <input name="address" type="text" class="form-control" id="Address"
+                                                        value="A108 Adam Street, New York, NY 535022">
+                                                </div>
+                                            </div>
+                                            <div class="row mb-3">
+                                                <label for="Phone" class="col-md-4 col-lg-3 ">Phone</label>
+                                                <div class="col-md-8 col-lg-9"> <input name="phone" type="text"
+                                                        class="form-control" id="Phone" value="(+998) _ _ _">
+                                                </div>
+                                            </div>
+                                            <div class="row mb-3">
+                                                <label for="Email"
+                                                    class="col-md-4 col-lg-3 col-form-label">Email</label>
+                                                <div class="col-md-8 col-lg-9">
+                                                    <input name="email" type="email" class="form-control" id="Email"
+                                                        value="ashsda@gmail.com">
+                                                </div>
+                                            </div>
+                                            <div class="text-center">
+                                                <button type="submit" class="btn btn-primary">Save Changes</button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                                <!--  Edit  Profile  ends   -->
+
+                                <!--  3_)  Profile  settings   starts   -->
+                                <div class="profile profile_settings" id="setting" style="display: none">
+                                    <div class="col-md-4 notifications">
+                                        <h4>Email Notifications</h4>
+                                    </div>
+                                    <div class="col-md-8" id="input_check">
+                                        <div class="profile-check">
+                                            <input type="checkbox" id="check">
+                                            <label for="check">Changes made to your account</label>
+                                        </div>
+                                        <div class="profile-check">
+                                            <input type="checkbox" id="info">
+                                            <label for="info">Information on new products and services</label>
+                                        </div>
+                                        <div class="profile-check">
+                                            <input type="checkbox" id="marketing">
+                                            <label for="marketing">Marketing and promo offers</label>
+                                        </div>
+                                        <div class="profile-check">
+                                            <input type="checkbox" disabled="disabled" id="security">
+                                            <label for="security" style="color:rgb(170, 165, 165);">Security
+                                                alerts</label>
+                                        </div>
+
+                                        <button type="submit" class="btn btn-primary settings_btn">Save Change</button>
+                                    </div>
+                                </div>
+                                <!--   Profile  settings   ends   -->
+
+                                <!--  4_)  Profile Change Password   starts    -->
+                                <div class="profile profile_changePassword" id="changepassw" style="display: none;">
+                                    <div class="row md-3">
+                                        <label class="col-md-5 col-lg-3">Current Password</label>
+                                        <input type="password" name="password" class="col-md-7 col-lg-8">
+                                    </div>
+                                    <div class="row md-3">
+                                        <label class="col-md-5 col-lg-3">New Password</label>
+                                        <input type="password" name="password" class="col-md-7 col-lg-8">
+                                    </div>
+                                    <div class="row md-3">
+                                        <label class="col-md-5 col-lg-3">Re-enter New Password</label>
+                                        <input type="password" name="password" class="col-md-7 col-lg-8">
+                                    </div>
+                                    <button type="submit">Change Password</button>
+                                </div>
+                                <!--   Profile Change Password   ends    -->
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3"></div>
+
+            </div>
+        </section>
+    </main>
+</body>
+
+</html>
