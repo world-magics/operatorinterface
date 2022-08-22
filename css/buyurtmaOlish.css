@@ -4,7 +4,20 @@
     box-sizing: border-box;
     scroll-behavior: smooth;
 }
-
+.oper_imgName{
+    text-align: center;
+    align-items: center;
+    display: flex;
+    margin: 5px;
+}
+.img_oper{
+    font-size: 30px;
+    color: green;
+}
+.name_oper{
+    font-size: 20px;
+    color: rgb(70, 70, 69);
+}
 .message{
     border-right: 2px solid rgb(198, 194, 194) !important;
 }

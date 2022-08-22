@@ -7,6 +7,7 @@
 
 body {
     font-family: "Lato", sans-serif;
+    background-color: #f7f8f8;
 }
 
 header {
@@ -16,32 +17,45 @@ header {
 }
 
 .navigation {
-    position: relative  ;
+    position: relative;
     display: flex;
     margin: 20px;
+    text-align: center;
+    align-items: baseline;
 }
-.nav_menu{
+
+.nav_menu {
     width: 30px !important;
     height: 40px;
     cursor: pointer !important;
-    background-color: rgb(249, 248, 248);
+    background-color: rgb(188, 187, 187);
     border: none;
+    border-radius: 5px;
 }
 
 .navigation ul {
     display: flex;
-}
-
-.navigation ul li {
-    font-size: 18px;
+    color: rgba(25, 62, 227, 0.801);
     margin: 0 10px;
 }
 
+.navigation ul li {
+    margin: 0 10px;
+}
+
+
 .navigation ul li a {
     text-decoration: none;
+    font-size: 17px !important;
 }
-.navigation ul li a i{
+
+.navigation ul li a i {
     float: right !important;
+}
+
+.navigation ul li:hover {
+    font-size: 18px;
+    transition: .5s;
 }
 
 /*   dropdawn   */
@@ -54,48 +68,52 @@ header {
     cursor: pointer;
     overflow-y: hidden;
 
-  }
-  
-  .dropbtn:hover, .dropbtn:focus {
+}
+
+.dropbtn:hover,
+.dropbtn:focus {
     background-color: #2980B9;
-  }
-  
-  .dropdown {
+}
+
+.dropdown {
     position: relative;
     display: inline-block;
-  }
-  
-  .dropdown-content {
+}
+
+.dropdown-content {
     display: none;
     position: absolute;
     background-color: #f1f1f1;
     min-width: 160px;
     overflow: auto;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     z-index: 1;
-  }
-  .myDropdown{
+}
+
+.myDropdown {
     z-index: 999;
-  }
-  .dropdown-content a {
+}
+
+.dropdown-content a {
     color: black;
     padding: 12px 16px;
     text-decoration: none;
     display: block;
-  }
-  
-  .dropdown a:hover {background-color: #ddd;}
-  
-  .show {display: block;}
+}
+
+/* .dropdown a:hover {background-color: #ddd;} */
+
+/* .show {display: block;} */
 /*   dropdawn   */
 
-.search{
+.search {
     position: absolute;
     right: 10px;
     border: 2px solid #2980B9;
     height: 35px;
     border-radius: 5px;
 }
+
 
 .sidebar {
     height: 100%;
@@ -114,7 +132,7 @@ header {
 .sidebar a {
     padding: 8px 8px 8px 32px;
     text-decoration: none;
-    font-size: 25px;
+    font-size: 22px;
     color: #818181;
     display: block;
     transition: 0.3s;
@@ -137,17 +155,20 @@ header {
     cursor: pointer;
     border: none;
 }
-.sidebar span{
+
+.sidebar span {
     margin: 5px;
 
 }
-.sidebar .online{
+
+.sidebar .online {
     color: green !important;
-    font-size: 20px;
+    font-size: 18px;
 }
-.idOperator{
+
+.idOperator {
     color: rgb(206, 205, 205) !important;
-    font-size: 21px;
+    font-size: 18px;
 }
 
 
@@ -155,8 +176,249 @@ header {
     transition: margin-left .5s;
     padding: 16px;
 }
+.statistika{
+    display: flex;
+    justify-content: space-evenly !important;
+    text-align: center;
+    align-items: center;
+}
+.statistika button{
+    border: none;
+    color: rgb(138, 137, 137);
+    cursor: pointer;
+    padding: 10px;
+    background-color: #ffffff;
+}
+.statistika button:hover{
+    color: #ffffff;
+    background-color: #2980B9;
+    transition: .4s all;
+}
+.date_statistika {
+    display: flex;
+    /* justify-content: end; */
+}
 
-/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+.date_statistika ul {
+    display: flex;
+    box-shadow: 0px 0px 20px rgb(1 41 112 / 10%) !important;
+}
+
+.date_statistika ul li {
+    color: rgb(138, 137, 137);
+    cursor: pointer;
+    padding: 10px;
+    background-color: #ffffff;
+}
+
+.date_statistika ul li:hover {
+    color: #ffffff;
+    background-color: #2980B9;
+    transition: .4s all;
+}
+
+.date_statistika ul li:active {
+    color: #29A0DC !important;
+}
+
+.date_statistika button {
+    height: 30px;
+    padding: 0 10px;
+    background-color: rgb(159, 158, 160);
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    font-size: 13px !important;
+    cursor: pointer;
+    margin: 5px;
+}
+
+.date_statistika button:hover {
+    background-color: #2980B9;
+    font-size: 15px;
+    transition: .5s;
+}
+
+.delivery_trasp{
+    display: flex;
+    justify-content: center;
+    margin: 10px;
+    /* padding: 0 80px; */
+}
+.transportlar {
+    background: #FFFFFF;
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.05);
+    width: fit-content;
+    height: 17vh;
+    width: 20%;
+    border-radius: 6px;
+    margin: 0 10px;
+}
+.transportlar:hover{
+    
+}
+.samolyot {
+    display: flex;
+    margin: 5px;
+    align-items: center !important;
+    text-align: center !important;
+}
+
+.samolyot h6 {
+    margin: 0 15px;
+    color: rgb(171, 170, 170);
+}
+.samolyot h6 i{
+    font-size: 20px;
+    color: #2980B9;
+}
+.delivery_trasp .foiz{
+    display: flex;
+    margin-top: 20px;
+    justify-content: space-between;
+}
+.delivery_trasp .foiz h5{
+    color: rgb(71, 74, 129);
+    font-weight: 700;
+    margin: 0 15px;
+}
+.delivery_trasp .foiz h6{
+    margin: 0 15px;
+    color: #0c9af8;
+    font-weight: 700;
+}
+
+.main_statistik{
+    margin: 10px 80px;
+    /* position: relative; */
+}
+.tavarlar_statistika{
+    position: relative;
+    display: flex;
+    margin-top: 30px;
+}
+/* .shartlar_asosida{
+    display: flex;
+    width: 35%;
+    background: #fff;
+    padding: 20px 30px;
+    margin: 0 20px 0 0;
+    border-radius: 12px;
+    box-shadow: 0 5px 10px rgb(0 0 0 / 10%);
+
+} */
+/* .shartlar_asosida ul {
+}
+.shartlar_asosida ul li{
+    display: flex !important;
+    align-items: center;
+    justify-content: space-evenly !important;
+    margin: 10px 0;
+} */
+.title{
+    display: flex;
+    justify-content: space-between;
+}
+.top-sales{
+    width: 35%;
+    background: #fff;
+    padding: 20px 30px;
+    margin: 0 20px 0 0;
+    border-radius: 12px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    margin-left: 10% !important;
+  }
+  .top-sales{
+    width: 35%;
+    background: #fff;
+    padding: 20px 30px;
+    margin: 0 20px 0 0;
+    border-radius: 12px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  }
+  .top-sales ul li{
+    display: flex;
+    margin-top: 10px;
+    justify-content: space-between !important;
+  }
+  .top-sales ul li a{
+    text-decoration: none;
+    color: rgb(62, 60, 60);
+  }
+
+  /*      Davlatlar statistikasi    */
+
+  .country_statistik #search{
+    border: 2px solid #2980B9;
+    height: 30px;
+    border-radius: 5px;
+    margin-top: 10px;
+  }
+  #table-example-1 { 
+    border: solid thin; 
+    border-collapse: collapse; 
+    margin-top: 20px;
+    color: #5f6062;
+  }
+  #table-example-1 .active{
+    color: #2980B9;
+    font-weight: 500;
+  }
+  #table-example-1 .ne_active{
+    color: red;
+    font-weight: 500;
+  }
+  #table-example-1 th, 
+  #table-example-1 td { 
+    border: solid thin;
+    padding: 0.5rem 2rem;
+  }
+  #table-example-1 td {
+    white-space: nowrap;
+  }
+  #table-example-1 th { 
+    font-weight: normal; 
+  }
+  #table-example-1 td { 
+    border-style: none solid; 
+    vertical-align: top; 
+  }
+  #table-example-1 th { 
+    padding: 0.2em; 
+    vertical-align: middle; 
+    text-align: center; 
+    color: rgb(147, 139, 139)  ;
+  }
+  
+  #table-example-1 tbody td:first-child::after { 
+    content: leader(". "); 
+  }
+  /*    Davlatlar statistikasi    */
+  
+  body {
+    padding: 1rem;
+  }
+
+
+
+
+
+
+
+
+@media(max-width: 850px) {
+    .statistika {
+        display: block;
+    }
+}
+
+@media(max-width: 580px) {
+    .user_table {
+        overflow-x: scroll !important;
+    }
+}
+
+
 @media screen and (max-height: 450px) {
     .sidebar {
         padding-top: 15px;
@@ -168,14 +430,16 @@ header {
 }
 
 
-@media(max-width: 990px){
-    .navigation ul{
+@media(max-width: 990px) {
+    .navigation ul {
         display: none;
     }
-    .search{
+
+    .search {
         height: 26px;
     }
-    .respons_head{
+
+    .respons_head {
         display: block !important;
     }
 }

@@ -2,131 +2,418 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>operator</title>
-    <link rel="stylesheet" href="./css/index.css">
-    <script src="./js/index.js" defer></script>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>operator</title>
+  <link rel="stylesheet" href="./css/index.css">
+  <script src="./js/index.js" defer></script>
 
 
-    <!--  bootstrap   -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <!-- CSS only -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
-    <!-- Font aweson  css  -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+  <!--  bootstrap   -->
+  <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"> -->
+  <!-- CSS only -->
+  <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous"> -->
+  <!-- Font aweson  css  -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+  <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"> -->
+
+
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 </head>
 
 <body>
-    <header>
-        <div class="navigation">
-            <!-- <button class="openbtn" onclick="openNav()">☰</button> -->
-            <button class="nav_menu" onclick="openNav()">☰</button>
-            <ul>
-                <!-- <li><select action="#">
-                        <option value="1">Заявки</option>
-                        <option value="">
-                            <a href="./barchaBuyurtma.html">все заявки</a>
-                        </option>
-                        <option value="1">
-                            <a href="">полученные заказы</a></option>
-                    </select>
-                </li> -->
-                <!-- <li>
-                    <a class="zayafka_hover" href="">Заявки</a>
-                    <ul class="block_hover">
-                        <li><a href="">Link 1</a></li>
-                        <li><a href="">Link 2</a></li>
-                        <li><a href="">Link 3</a></li>
-                    </ul>
-                </li> -->
-                <!-- <div class="dropdown">
-                    <button onclick="myFunction()" class="dropbtn">Dropdown</button>
-                    <div id="myDropdown" class="dropdown-content">
-                      <a href="#home">Home</a>
-                      <a href="#about">About</a>
-                      <a href="#contact">Contact</a>
-                    </div>
-                  </div> -->
+  <header>
+    <div class="navigation heade_menu">
+      <button class="nav_menu" onclick="openNav()">☰</button>
+      <ul>
+        <li><a href="./barchaBuyurtma.html">все заявки</a></li>
+        <li><a href="./sortOrders.html">Мои заявки</a></li>
+        <li><a href="./buyurtmaOlish.html">Заказы</a></li>
+        <li><a href="./kompanyInfo.html">Справочники </a></li>
+
+        <li><a href="./message.html">чат</a></li>
+      </ul>
+      <input class="search" type="search" placeholder="search">
+
+    </div>
+  </header>
+
+  <!--     sidebar    -->
+  <div id="mySidebar" class="sidebar">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">x</a>
+    <img
+      src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQPT9mqiidTshsbvsr8SDUYnTLNv3f31RTL0JrQFOZd7ECP8OQ1h0mR_Ze3VlzMPknrUhs&usqp=CAU"
+      alt="profile">
+    <span class="idOperator">ID-10</span>
+    <span class="online">online</span>
+
+    <div class="respons_head" style="display: none;">
+      <a href="./barchaBuyurtma.html">все заявки</a>
+      <a href="./sortOrders.html">Мои заявки</a>
+      <a href="./buyurtmaOlish.html">Заказы</a>
+      <a href="./kompanyInfo.html">Справочники </a>
+      <a href="./kompInfoSet.html">бланк шаблон </a>
+      <a href="./message.html">чат</a></li>
+    </div>
 
 
-                <li><a href="./barchaBuyurtma.html">все заявки</a></li>
-                <li><a href="./sortOrders.html">Мои заявки</a></li>
-                <li><a href="./buyurtmaOlish.html">Заказы</a></li>
-                <li><a href="./kompanyInfo.html">Справочники </a></li>
-                
-                <li><a href="./message.html">чат</a></li>
-                <!-- <li><a href="./message.html"><i class="fa-solid fa-message"></i></a></li> -->
+    <a href="./profile.html">личный данные </a>
+    <a href="./zayvkiIstory.html">заявки-история </a>
+    <a href="./buyurtmaHistory.html">заказы история </a>
+    <a href="./callHistory.html">звонки историй </a>
+    <a href="./operatorlarPage.html">Оператор</a>
+    <a href="./korilmaganBuyurtma.html">Просроченные-заказы</a>
+    <a href="index.html">Статистика</a>
+  </div>
+  <!--     sidebar  ends     -->
+
+
+
+  <div id="main">
+    <!-- <h4>Statistika</h4> -->
+    <div class="statistika">
+
+      <div class="">
+        <button class="button" onclick="openPage('London')">Условия поставки</button>
+        <button class=" button" onclick="openPage('Paris')">Страны </button>
+        <button class="button" onclick="openPage('Tokyo')">Операторы</button>
+        <button class="button" onclick="openPage('даставки ')">даставки </button>
+      </div>
+
+
+      <div class="date_statistika">
+        <ul>
+          <li><span>Сегодня</span>|</li>
+          <li><span>Вчера </span>|</li>
+          <li><span>Неделя</span>|</li>
+          <li><span>месяц</span>|</li>
+          <li><span>месяц</span>|</li>
+          <li><span><input type="date"></span></li>
+        </ul>
+
+        <button type="submit">Обновлять</button>
+      </div>
+
+    </div>
+
+
+    <div class="delivery_trasp">
+      <div class="transportlar">
+        <div class="samolyot">
+          <h6>Всего заявка :</h6>
+        </div>
+        <div class="foiz">
+          <h5>30200</h5>
+          <div class="w3-container w3-green center" style="width:25%; margin-right: 5px;">100%</div>
+        </div>
+
+      </div>
+      <div class="transportlar">
+        <div class="samolyot">
+          <h6>Принято</h6>
+          <!-- <h6><i class="fa-solid fa-plane"></i></h6> -->
+        </div>
+        <div class="foiz">
+          <h5>10200</h5>
+          <h6><span>+39.4</span>%</h6>
+        </div>
+
+      </div>
+      <div class="transportlar">
+        <div class="samolyot">
+          <h6>отклоненный</h6>
+          <!-- <h6><i class="fa-solid fa-truck-arrow-right"></i></h6> -->
+        </div>
+        <div class="foiz">
+          <h5>10200</h5>
+          <h6><span>+30.6</span>%</h6>
+        </div>
+
+      </div>
+      <!-- <div class="transportlar">
+        <div class="samolyot">
+          <h6>Самалёт количество</h6>
+          <h6><i class="fa-solid fa-train-subway"></i>
+          </h6>
+        </div>
+        <div class="foiz">
+          <h5>10200</h5>
+          <h6><span>+30</span>%</h6>
+        </div>
+
+      </div> -->
+
+    </div>
+
+    <div class="main_statistik">
+
+      <!--   Yetkazib berish Shakli -->
+      <div id="London" class="w3-container call">
+        <div class="tavarlar_statistika">
+          <canvas id="myShartlar_asosida" style="width:100%;max-width:600px">
+          </canvas>
+          <!--  Boxs -->
+          <div class="top-sales box">
+            <div class="title">
+              <span>Условия поставки</span>
+              <span>Общий : 2000</span>
+            </div>
+            <ul class="top-sales-details">
+              <li>
+                <a href="#">
+                  <span class="product">YXW </span>
+                </a>
+                <span class="price">10 000 </span>
+              </li>
+              <li>
+                <a href="#">
+                  <span class="product">FOB </span>
+                </a>
+                <span class="price">18 800 </span>
+              </li>
+              <li>
+                <a href="#">
+                  <span class="product">DDP </span>
+                </a>
+                <span class="price">7 000</span>
+              </li>
+              <li>
+                <a href="#">
+                  <span class="product">DPU </span>
+                </a>
+                <span class="price">2000 </span>
+              </li>
+              <li>
+                <a href="#">
+                  <span class="product">XXX </span>
+                </a>
+                <span class="price">5 000</span>
+              </li>
+
             </ul>
-            <input class="search" type="search" placeholder="search">
+
+          </div>
 
         </div>
-    </header>
+      </div>
 
-    <!--     sidebar    -->
-    <div id="mySidebar" class="sidebar">
-        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">x</a>
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQPT9mqiidTshsbvsr8SDUYnTLNv3f31RTL0JrQFOZd7ECP8OQ1h0mR_Ze3VlzMPknrUhs&usqp=CAU"
-            alt="profile">
-        <span class="idOperator">ID-10</span>
-        <span class="online">online</span>
+      <!--   Davlatlar statistikasi   -->
+      <div id="Paris" class="w3-container call country_statistik" style="display:none">
+        <div class="tavarlar_statistika">
+          <canvas id="myChart" style="width:100%;max-width:600px"></canvas>
+          </canvas>
+          <div class="top-sales box">
+            <div class="title">
+              <span>Страны</span>
+              <span>Общий : 100%</span>
+            </div>
+            <ul class="top-sales-details">
+              <li>
+                <a href="#">
+                  <span class="product">Китай </span>
+                </a>
+                <span class="price">30%</span>
+              </li>
+              <li>
+                <a href="#">
+                  <span class="product">Франция </span>
+                </a>
+                <span class="price">12% </span>
+              </li>
+              <li>
+                <a href="#">
+                  <span class="product">Испания </span>
+                </a>
+                <span class="price">9%</span>
+              </li>
+              <li>
+                <a href="#">
+                  <span class="product">Узбекистан </span>
+                </a>
+                <span class="price">15% </span>
+              </li>
+              <li>
+                <a href="#">
+                  <span class="product">США </span>
+                </a>
+                <span class="price">10%</span>
+              </li>
+              <li>
+                <a href="#">
+                  <span class="product">Аргентина </span>
+                </a>
+                <span class="price">10%</span>
+              </li>
 
-        <div class="respons_head" style="display: none;">
-            <a href="./barchaBuyurtma.html">все заявки</a>
-            <a href="./sortOrders.html">Мои заявки</a>
-            <a href="./buyurtmaOlish.html">Заказы</a>
-            <a href="./kompanyInfo.html">Справочники </a>
-            <a href="./kompInfoSet.html">бланк шаблон </a>
-            <a href="./message.html">чат</a></li>
+            </ul>
+
+          </div>
         </div>
 
+        <input id="search" type="search" placeholder="search">
+        <table id="table-example-1">
+          <thead>
+            <tr>
+              <th >№_</th>
+              <th rowspan="2">Страны</th>
+              <th colspan="2">количество %</th>
+              <th rowspan="2">Город </th>
+              <!-- <th rowspan="2">Per cent </th>
+              <th>lb/in<sup>2</sup></th> -->
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1_</td>
+              <td>Казахстан</td>
+              <td><span>5.2 %</span></td>
+              <td>1,000</td>
+              <td>Нур-Султан </td>
+              <!-- <td><span><i class="bx bx-up-arrow-alt"></i></span></td> -->
+            </tr>
+            <tr>
+              <td>2_</td>
+              <td>Кыргызстан</td>
+              <td>4.2 %</td>
+              <td>900</td>
+              <td>Бишкент</td>
+            </tr>
+            <tr>
+              <td>3_</td>
+              <td>Таджикистан</td>
+              <td>8.2 %</td>
+              <td>11000</td>
+              <td>Душанбе </td>
+            </tr>
+          </tbody>
+        </table>
 
-        <a href="./profile.html">личный данные </a>
-        <a href="./zayvkiIstory.html">заявки-история </a>
-        <a href="./buyurtmaHistory.html">заказы история </a>
-        <a href="./callHistory.html">звонки историй </a>
-        <a href="./operatorlarPage.html">Оператор</a>
-        <a href="#">Статистика</a>
+      </div>
+
+      <div id="Tokyo" class="w3-container call" style="display:none">
+        <input id="search" type="search" placeholder="search">
+        <table id="table-example-1">
+          <thead>
+            <tr>
+              <th >№_</th>
+              <th rowspan="2">Имя</th>
+              <th colspan="2">дневная работа</th>
+              <!-- <th rowspan="2">дневная работа </th> -->
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1_</td>
+              <td>Нурилло</td>
+              <td><span class="active">50</span></td>
+              <td><span class="ne_active">20</span></td>
+              <td>70 </td>
+            </tr>
+            <tr>
+              <td>2_</td>
+              <td>Исматилло</td>
+              <td><span class="active">80</span></td>
+              <td><span class="ne_active">15</span></td>
+              <td>95</td>
+            </tr>
+            <tr>
+              <td>3_</td>
+              <td>Усман</td>
+              <td><span class="active">76</span></td>
+              <td><span class="ne_active">20</span></td>
+              <td>96</td>
+            </tr>
+          </tbody>
+        </table>
+
+      </div>
+      <div id="даставки " class="w3-container call" style="display:none">
+        <div class="delivery_trasp">
+          <div class="transportlar">
+            <div class="samolyot">
+              <h6>Общая доставка :</h6>
+            </div>
+            <div class="foiz">
+              <h5>30200</h5>
+              <!-- <h6><span>+30.6</span>%</h6> -->
+              <div class="w3-container w3-green center" style="width:25%; margin-right: 5px;">100%</div>
+            </div>
+    
+          </div>
+          <div class="transportlar">
+            <div class="samolyot">
+              <h6>Самалёт</h6>
+              <h6><i class="fa-solid fa-plane"></i></h6>
+            </div>
+            <div class="foiz">
+              <h5>10200</h5>
+              <h6><span>+39.4</span>%</h6>
+            </div>
+    
+          </div>
+          <div class="transportlar">
+            <div class="samolyot">
+              <h6>Грузовая машина</h6>
+              <h6><i class="fa-solid fa-truck-arrow-right"></i></h6>
+            </div>
+            <div class="foiz">
+              <h5>10200</h5>
+              <h6><span>+30.6</span>%</h6>
+            </div>
+    
+          </div>
+          <div class="transportlar">
+            <div class="samolyot">
+              <h6>Тренироваться</h6>
+              <h6><i class="fa-solid fa-train-subway"></i>
+              </h6>
+            </div>
+            <div class="foiz">
+              <h5>10200</h5>
+              <h6><span>+30</span>%</h6>
+            </div>
+    
+          </div>
+          <div class="transportlar">
+            <div class="samolyot">
+              <h6>Судно</h6>
+              <h6><i class="fa-solid fa-ship"></i></i>
+              </h6>
+            </div>
+            <div class="foiz">
+              <h5>10200</h5>
+              <h6><span>+30</span>%</h6>
+            </div>
+    
+          </div>
+    
+        </div>
+
+      </div>
+
+
+
+
     </div>
-    <!--     sidebar  ends     -->
-
-    <!-- Sidebar Responsive   -->
-
-    <div id="mySidebar " class="sidebar" style="display: none;">
-        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">x</a>
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQPT9mqiidTshsbvsr8SDUYnTLNv3f31RTL0JrQFOZd7ECP8OQ1h0mR_Ze3VlzMPknrUhs&usqp=CAU"
-            alt="profile">
-        <span class="idOperator">ID-10</span>
-        <span class="online">online</span>
-
-
-        <a href="./profile.html">личный данные </a>
-        <a href="./zayvkiIstory.html">заявки-история </a>
-        <a href="./buyurtmaHistory.html">заказы история </a>
-        <a href="./callHistory.html">звонки историй </a>
-        <a href="./operatorlarPage.html">Оператор</a>
-        <a href="#">Статистика</a>
-    </div>
-
-    <!-- Sidebar Responsive   -->
-
-    <div id="main">
-        <h4>Statistika</h4>
-    </div>
 
 
 
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-        crossorigin="anonymous"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script> -->
     <!-- JavaScript Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
-        crossorigin="anonymous"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+    crossorigin="anonymous"></script> -->
+
+    <!--   staistika chats.js     -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+
 </body>
 
 </html>

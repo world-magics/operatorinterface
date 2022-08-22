@@ -40,11 +40,11 @@ function loaded() {
     tbody.innerHTML += `
             <tr>
             <th scope="row">${id++}</th>
-            <td ><img class='img_admin' src="${users[i].image}" alt="">
+            <td ><img  class='img_admin' src="${users[i].image}" alt="">
             <span class='onlyn'>online</span>
             </td>
             
-            <td>${users[i].name}</td>
+            <td onclick="userInfo(${users[i].id})">${users[i].name}</td>
             <td>${users[i].email}</td>
             <td class="d-flex justify-space-around">
                 <button class="btn btn-info" onclick="editUser(${users[i].id})">
@@ -57,8 +57,35 @@ function loaded() {
                 </button>
             </td>
           </tr> 
+
+         
             `;
   }
+
+  let userrr = document.querySelector('.user_malumot'); 
+  let immmg = document.querySelectorAll('.img_admin'); 
+  let closeMalu = document.querySelector('.close_malumot')
+  // console.log(closeMalu);
+  // console.log(immmg);
+  immmg.forEach((item, idx) => {
+    item.addEventListener('click', () => {
+      // console.log('salom');
+      userrr.style.display = 'block'
+      userrr.innerHTML=
+       `      
+              <button type="submit" onclick="foo();"class ='close_malumot'>X</button>
+              <div class="name">Name:${users[idx].name}</div>
+              <div class="email">${users[idx].email}</div> 
+              <div class="tell">Tell:<span>_ _ _</span></div> 
+              <div >Country:<span>_ _ _</span></div> 
+              <div >Adress:<span>_ _ _</span></div> 
+      `
+    })
+  })
+}
+
+function foo(){
+  document.querySelector('.user_malumot').style.display = "none";
 }
 let upload;
 const img = document.getElementById("images");
@@ -104,7 +131,7 @@ function deleteUser(id) {
   users.forEach((item) => {
     if (item.id == id) {
       // index = users.indexOf(item);
-      alert("Faoliyati to'xtatildi")
+      alert("Деятельность приостановлена")
     }
   });
   // users.splice(index, 1);
@@ -147,3 +174,9 @@ function Edit() {
   modal.style.display = "none";
   loaded();
 }
+
+function userInfo(id) {
+
+}
+userInfo(id)
+
