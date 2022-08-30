@@ -15,48 +15,140 @@
 </head>
 
 <body>
-    <header>
-        <div class="navigation">
-            <!-- <button class="openbtn" onclick="openNav()">☰</button> -->
-            <span onclick="openNav()">☰</span>
+    <div id="header_bar">
+    
+        <div class="menu-bar">
+          <button class="logo" onclick="openNav()">☰</button>
+          <div class="unv_filter">
             <ul>
-                <li><a href="./barchaBuyurtma.html">все заявки</a></li>
-                <li><a href="./sortOrders.html">Мои заявки</a></li>
-                <li><a href="./buyurtmaOlish.html">Заказы</a></li>
-                <li><a href="./kompanyInfo.html">Справодники </a></li>
-                
-                <li><a href="./message.html">чат</a></li>
-                <!-- <li><input class="search" type="search"></li> -->
+              <li class="sort_btn">
+                <div class="sort_div">
+                  <span class="sort_список">список <i class="fas fa-caret-down"></i></span>
+                </div>
+    
+                <div class="dropdown-menu">
+                  <ul>
+                    <!-- <li><a href="#">Все заявки</a>
+                    </li>
+                    <li><a href="#">Мои заявки</a>
+                    </li>
+                    <li><a href="#">Заказы</a>
+                    </li> -->
+    
+                    <li>
+                      <!-- <a href="#"></a> -->
+                      <span>Заявки <i class="fas fa-caret-right"></i></span>
+                      <div class="dropdown-menu-1">
+                        <ul>
+                          <li>
+                            <input type="radio" id="hammasi" name="radio" value="Все">
+                            <label for="hammasi">Все заявки</label><br>
+                          </li>
+                          <li>
+                            <input type="radio" id="hammasi" name="radio" value="Все">
+                            <label for="hammasi">Мои заявки</label><br>
+                          </li>
+                          <li>
+                            <input type="radio" id="qaytaIshlash" name="radio" value="обработке">
+                            <label for="qaytaIshlash">В обработке</label><br>
+                          </li>
+                          <li>
+                            <input type="radio" id="tasdiqlangan" name="radio" value="подтвержденные">
+                            <label for="tasdiqlangan">подтвержденные</label><br>
+                          </li>
+                          <li>
+                            <input type="radio" id="radetilgan" name="radio" value="отмененные">
+                            <label for="radetilgan">отмененные</label><br>
+                          </li>
+                        </ul>
+                      </div>
+                    </li>
+                    <li>
+                      <span>Заказы <i class="fas fa-caret-right"></i></span>
+                      <div class="dropdown-menu-1">
+                        <ul>
+                          <li>
+                            <input type="radio" id="hammasi1" name="radio2" value="Все">
+                            <label for="hammasi1">Все Заказы</label><br>
+                          </li>
+                          <li>
+                            <input type="radio" id="qaytaIshlash1" name="radio2" value="обработке">
+                            <label for="qaytaIshlash1">В обработке</label><br>
+                          </li>
+                          <li>
+                            <input type="radio" id="tasdiqlangan1" name="radio2" value="подтвержденные">
+                            <label for="tasdiqlangan1">подтвержденные</label><br>
+                          </li>
+                          <li>
+                            <input type="radio" id="radetilgan1" name="radio2" value="отмененные">
+                            <label for="radetilgan1">отмененные</label><br>
+                          </li>
+                        </ul>
+                      </div>
+                    </li>
+                    <li>
+                      <label>ИД Клиента</label>
+                      <input type="number" placeholder="номер">
+                    </li>
+                    <li>
+                      <label>Операторы</label>
+                      <input type="text" placeholder="имя">
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li><span class="list_value">список.value</span></li>
+              <li>
+                <div class="btn_date">
+                  <ul>
+                    <li>
+                      <input type="date" id="start" name="trip-start" value="2022-07-22" min="2022-01-01" max="2030-12-31">
+                    </li>
+                    <span> -- </span>
+                    <li>
+                      <input type="date" id="start" name="trip-start" value="2022-07-22" min="2022-01-01" max="2030-12-31">
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li><button class="btn_filter" type="submit">фильтр</button></li>
             </ul>
-            <input class="search" type="search" placeholder="search">
-    </header>
-
-    <!--     sidebar    -->
-    <div id="mySidebar" class="sidebar">
-        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">x</a>
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQPT9mqiidTshsbvsr8SDUYnTLNv3f31RTL0JrQFOZd7ECP8OQ1h0mR_Ze3VlzMPknrUhs&usqp=CAU"
-            alt="profile">
-            <span class="idOperator">ID-10</span>
-            <span class="online">online</span>
-
-        <div class="respons_head" style="display: none;">
-            <a href="./barchaBuyurtma.html">все заявки</a>
-            <a href="./sortOrders.html">Мои заявки</a>
-            <a href="./buyurtmaOlish.html">Заказы</a>
-            <a href="./kompanyInfo.html">Справочники </a>
-            <a href="./kompInfoSet.html">бланк шаблон </a>
-            <a href="./message.html">чат</a></li>
+    
+          </div>
+          <span onclick="resFilter()" class="resp_filter">Filter</span>
+          <div class="icon_messages">
+            <span><a onclick="eslatmaHabarlar()" class="eslatma" href="#"><i class="fa-solid fa-bell"></i></i></a>
+            </span>
+            <span><a href="./message.html"><i class="fa-solid fa-message"></i></a>
+            </span>
+          </div>
         </div>
+      </div>
+    
+      <!--     sidebar    -->
+      <div id="mySidebar" class="sidebar">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">x</a>
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQPT9mqiidTshsbvsr8SDUYnTLNv3f31RTL0JrQFOZd7ECP8OQ1h0mR_Ze3VlzMPknrUhs&usqp=CAU"
+          alt="profile">
+        <span class="idOperator">ID-10</span>
+        <span class="online">online</span>
+    
+        <div class="respons_head" style="display: none;">
+          <a href="./barchaBuyurtma.html">все заявки</a>
+          <a href="./sortOrders.html">Мои заявки</a>
+          <a href="./buyurtmaOlish.html">Заказы</a>
+        </div>
+    
+    
         <a href="./profile.html">личный данные </a>
         <a href="./zayvkiIstory.html">заявки-история </a>
         <a href="./buyurtmaHistory.html">заказы история </a>
         <a href="./callHistory.html">звонки историй </a>
         <a href="./operatorlarPage.html">Оператор</a>
-        <a href="./korilmaganBuyurtma.html">Просроченные-заказы</a>
-        <a href="index.html">Статистика</a>
-    </div>
-    <!--     sidebar  ends     -->
-
+        <!-- <a href="index.html">Статистика</a> -->
+      </div>
+      <!--     sidebar  ends     -->
     <main class="content" id="main">
         <div class="container p-0">
 

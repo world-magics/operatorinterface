@@ -11,7 +11,7 @@
 }
 .sarlavha{
     font-size: 25px;
-    margin: 50px 0;
+    color: rgb(180, 172, 172);
 }
 .boshSahifa a{
     border: 2px solid aliceblue;
@@ -51,7 +51,6 @@
 }
 .user_pages ul li{
     border-bottom: 1px solid rgb(220, 217, 217);
-    /* width: 100vw !important; */
 }
 .user_pages ul li a{
     text-decoration: none;
@@ -64,53 +63,21 @@
 .user_pages ul li a:hover{
     color: rgb(127, 44, 211);
 }
-.message{
-    /* display: flex; */
-    justify-content: space-between;
-}
-.text{
-    margin-left: 20px;
-    padding: 0 20px;
-}
-.dropbtn{
-    padding: 5px;
-    border: 2px solid rgb(124, 126, 127);
-    border-radius: 5px;
-    /* color: rgb(199, 195, 195); */
-}
 
-/*---------Dropdown-------------*/
-/* .dropbtn {
-    background-color: #04AA6D;
-    color: white;
-    padding: 16px;
-    font-size: 16px;
-    border: none;
-  }
-  
-  .dropdown {
-    position: relative;
-    display: inline-block;
-  }
-  
-  .dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f1f1f1;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-  }
-  
-  .dropdown-content a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-  }
-  
-  .dropdown-content a:hover {background-color: #ddd;}
-  
-  .dropdown:hover .dropdown-content {display: block;}
-  
-  .dropdown:hover .dropbtn {background-color: #3e8e41;} */
+.logist_yuborish{
+    display: flex;
+    margin: 20px;
+}
+.logist_list span{
+    border: 2px solid rgb(180, 177, 177);
+}
+.logist_list  i{
+    margin: 0 10px;
+}
+.list{
+    background-color: aliceblue;
+}
+.logist_yuborish button{
+    margin: 0 20px !important;
+    border: 2px solid rgb(180, 177, 177);
+}

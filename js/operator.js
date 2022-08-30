@@ -71,7 +71,8 @@ function loaded() {
     item.addEventListener('click', () => {
       // console.log('salom');
       userrr.style.display = 'block'
-      userrr.innerHTML=
+      userrr.innerHTML = ''
+      userrr.innerHTML +=
        `      
               <button type="submit" onclick="foo();"class ='close_malumot'>X</button>
               <div class="name">Name:${users[idx].name}</div>
@@ -175,8 +176,4 @@ function Edit() {
   loaded();
 }
 
-function userInfo(id) {
-
-}
-userInfo(id)
 
